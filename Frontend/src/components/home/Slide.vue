@@ -26,7 +26,7 @@
 <script setup lang="ts">
 import { MDBBtn } from 'mdb-vue-ui-kit';
 
-console.log("Home component loaded");
+console.log("Slide component loaded");
 </script>
 
 <style scoped>

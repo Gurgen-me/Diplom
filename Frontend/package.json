@@ -19,5 +19,10 @@
     "typescript": "^5.3.2",
     "vite": "^3.1.0",
     "vue-tsc": "^1.8.27"
-  }
+  },
+  "description": "MDB 5 Vue",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

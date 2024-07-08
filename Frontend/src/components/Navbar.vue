@@ -1,5 +1,6 @@
 <template>
   <MDBNavbar expand="lg" light bg="white" container>
+    <a class="navbar-brand" href="#">GM</a>
     <MDBNavbarToggler
       target="#navbarExample02"
       @click="collapse2 = !collapse2"
