@@ -1,32 +1,46 @@
 const express = require('express');
-const { connectToDb, getDb } = require('./db');
+const mongoose = require('mongoose');
+const http = require('http');
+const cors = require('cors');
+
+const Service = require('./models/Services');
 
 const PORT = 3000;
 
 const app = express();
+const server = http.createServer(app);
 
-let db;
+app.use(express.json());
+app.use(cors());
 
-connectToDb((err) => {
-    if (!err) {
-        app.listen(PORT, (err) => {
-            err ? console.log(err) : console.log(`Listening port ${PORT}`);
-        });
-        db = getDb();
-    } else {
-        console.log(`Db connection error: ${err}`);
+app.post('/create', async (req, res) => {
+    try {
+        const { photo,title, details, price } = req.body;
+        const response = await Service.create({ photo, title, details, price });
+        console.log(response);
+        return res.json(response);
+    } catch (error) {
+        console.log(error);
     }
-});
+}) 
 
-app.get('/services', (req, res) => {
-    const services = [];
-    db
-        .collection('services')
-        .find()
-        .forEach((service) => services.push(service))
-        .then(() => {
-            res
-                .status(200)
-                .json(services);
-        })
+app.get('/services', async (req, res) => {
+    try {
+        const response = await Service.find();
+        console.log(response);
+        return res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
 })
+
+async function run() {
+    try {
+        await mongoose.connect('mongodb://localhost:27017/admin');
+        server.listen(PORT);
+        console.log(`Start on http://localhost:${PORT}`);
+    } catch (error) {
+        console.log(error);
+    }
+}
+run().catch(console.log);
