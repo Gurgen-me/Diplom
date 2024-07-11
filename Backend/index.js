@@ -36,7 +36,7 @@ app.get('/services', async (req, res) => {
 
 async function run() {
     try {
-        await mongoose.connect('mongodb://localhost:27017/admin');
+        await mongoose.connect('mongodb://localhost:27017/GM');
         server.listen(PORT);
         console.log(`Start on http://localhost:${PORT}`);
     } catch (error) {

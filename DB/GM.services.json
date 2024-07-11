@@ -1,0 +1,10 @@
+[{
+  "_id": {
+    "$oid": "668fd6d09ac5a00b7e079327"
+  },
+  "photo": "./images/1.jpg",
+  "title": "Penis",
+  "details": "Haha",
+  "price": 2000,
+  "__v": 0
+}]
