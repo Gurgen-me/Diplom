@@ -1,17 +1,20 @@
 <template>
-  <MDBNavbar expand="lg" light bg="white" container>
-    <a class="navbar-brand" href="#">GM</a>
+  <MDBNavbar expand="lg" light bg="black" container>
+    <router-link to="/" class="nav-link">GM</router-link>
     <MDBNavbarToggler
       target="#navbarExample02"
       @click="collapse2 = !collapse2"
     ></MDBNavbarToggler>
     <MDBCollapse id="navbarExample02" v-model="collapse2">
-      <MDBNavbarNav class="mb-2 mb-lg-0">
+      <MDBNavbarNav  right class="mb-2 mb-lg-0">
         <MDBNavbarItem>
-          <router-link to="/" class="nav-link">Home</router-link>
+          <router-link to="/" class="nav-link">Главная</router-link>
         </MDBNavbarItem>
         <MDBNavbarItem>
-          <router-link to="/faq" class="nav-link">FAQ</router-link>
+          <router-link to="/portfolio" class="nav-link">Портфолио</router-link>
+        </MDBNavbarItem>
+        <MDBNavbarItem>
+          <router-link to="/about" class="nav-link">О нас</router-link>
         </MDBNavbarItem>
       </MDBNavbarNav>
     </MDBCollapse>
@@ -30,3 +33,15 @@ import {
 
 const collapse2 = ref(false);
 </script>
+
+<style>
+.nav-link {
+  color: white;
+}
+.nav-link:hover {
+  color: rgb(121, 121, 121);
+}
+.navbar-toggler {
+  background-color: #ffffff;
+}
+</style>

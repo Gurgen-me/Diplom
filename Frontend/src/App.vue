@@ -1,24 +1,11 @@
-import "mdb-vue-ui-kit/css/mdb.min.css";
-
-import { createApp } from "vue";
-import "./style.css";
-import App from "./App.vue";
-import router from "./router";
-
-createApp(App).use(router).mount("#app");
-
-
-
 <template>
-  <div id="app">
-    <header>
-      <Navbar />
-    </header>
-    <router-view />
-    <footer>
-      <Footer />
-    </footer>
-  </div>
+
+  <Navbar />
+
+  <router-view />
+
+  <Footer />
+
 </template>
 
 <script lang="ts">
@@ -32,9 +19,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-#app {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
-}
-</style>
