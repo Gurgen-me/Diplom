@@ -10,23 +10,29 @@
       ">
       <!-- Left -->
       <div class="me-5 d-none d-lg-block">
-        <span>Наши социальные сети:</span>
+        <span>Get connected with us on social networks:</span>
       </div>
       <!-- Left -->
       <!-- Right -->
       <div>
-        <router-link to="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="instagram"></MDBIcon>
-        </router-link>
-        <router-link to="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="vk"></MDBIcon>
-        </router-link>
-        <router-link to="" class="me-4 text-reset">
+        <a href="" class="me-4 text-reset">
+          <MDBIcon iconStyle="fab" icon="facebook-f"></MDBIcon>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <MDBIcon iconStyle="fab" icon="twitter"></MDBIcon>
+        </a>
+        <a href="" class="me-4 text-reset">
           <MDBIcon iconStyle="fab" icon="google"></MDBIcon>
-        </router-link>
-        <router-link to="" class="me-4 text-reset">
+        </a>
+        <a href="" class="me-4 text-reset">
+          <MDBIcon iconStyle="fab" icon="instagram"></MDBIcon>
+        </a>
+        <a href="" class="me-4 text-reset">
+          <MDBIcon iconStyle="fab" icon="linkedin"></MDBIcon>
+        </a>
+        <a href="" class="me-4 text-reset">
           <MDBIcon iconStyle="fab" icon="github"></MDBIcon>
-        </router-link>
+        </a>
       </div>
       <!-- Right -->
     </section>
@@ -40,16 +46,19 @@
           <MDBCol md="3" lg="4" xl="3" class="mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>GM
+              <i class="fas fa-gem me-3"></i>Company name
             </h6>
             <p>
-              GM - профессиональный детейлинг любой сложности. Автодетейлинг высокого качества за доступную
-              цену.
+              Here you can use rows and columns to organize your footer
+              content. Lorem ipsum dolor sit amet, consectetur
+              adipisicing elit.
             </p>
           </MDBCol>
+          <!-- Grid column -->
+          <!-- Grid column -->
           <MDBCol md="3" lg="2" xl="2" class="mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Услуги</h6>
+            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
             <p>
               <router-link to="" class="text-reset">Pricing</router-link>
             </p>
@@ -73,7 +82,7 @@
             </p>
             <p>
               <i class="fas fa-envelope"></i>
-              gmdetailing@gmail.com
+              &nbsp;&nbsp;&nbsp;gmdetailing@gmail.com
             </p>
             <p>
               <MDBIcon icon="phone" class="me-3" />+7 989 827 02 07
@@ -88,7 +97,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
       © 2024 Copyright:
-      <router-link to="">GM</router-link>
+      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">GM</a>
     </div>
     <!-- Copyright -->
   </MDBFooter>
@@ -108,4 +117,8 @@ import {
 
 <style scoped>
 
+.bg-light {
+    --mdb-bg-opacity: 1;
+
+}
 </style>

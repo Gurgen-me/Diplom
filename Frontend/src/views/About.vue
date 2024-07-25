@@ -1,7 +1,7 @@
 <template>
-    <Bigimg/>
+    <Bigimg />
     <h1 class="text-center">GM - это специалисты с опытом более 10 лет!</h1>
-    <Slideabout/>
+    <Slideabout />
     <div class="filling">
         <h2 class="text-center">О нас</h2>
         <hr class="my-5">
@@ -38,13 +38,16 @@
                 Более подробную информацию можно получить https://bestbrand-shop.ru/.
             </li>
         </ol>
+    
     </div>
+    <hr>
+    <Map />
 </template>
 
 <script setup lang="ts">
 import Slideabout from '../components/about/Slideabout.vue'
 import Bigimg from '../components/about/Bigimg.vue'
-
+import Map from '../components/about/Map.vue'
 
 </script>
 <style>

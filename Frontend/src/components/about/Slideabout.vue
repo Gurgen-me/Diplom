@@ -5,9 +5,14 @@
 </template>
 <script>
 export default {
-    
+
 }
 </script>
-<style lang="">
-    
+<style scoped>
+
+    .img-thumbnail{
+        border-radius: 25px;
+        width: 850px;
+        height: 450px;
+    }
 </style>
