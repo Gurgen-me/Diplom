@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "6697ae44f712c445414ad046"
+  },
+  "photo": "1.jpg",
+  "title": "Стандартная мойка",
+  "details": "Haha",
+  "price": 1500,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a2618559923f35b4adfb8c"
+  },
+  "photo": "2.jpg",
+  "title": "Трёхфазная мойка",
+  "details": "Haha",
+  "price": 800,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a261b759923f35b4adfb8d"
+  },
+  "photo": "3.jpg",
+  "title": "Деликатная мойка салона",
+  "details": "Haha",
+  "price": 800,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66a261e859923f35b4adfb8e"
+  },
+  "photo": "./images/4.jpg",
+  "title": "Премиум мойка",
+  "details": "Haha",
+  "price": 2500,
+  "__v": 0
+}]
