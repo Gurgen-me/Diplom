@@ -1,7 +1,22 @@
+import { createApp } from 'vue'
+import { createStore } from 'vuex'
 import "mdb-vue-ui-kit/css/mdb.min.css";
-
-import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-createApp(App).use(router).mount("#app");
+
+const store = createStore({
+    state () {
+      return {
+        count: 0
+      }
+    },
+    mutations: {
+        allServices (state) {
+        state.count++
+      }
+    }
+  })
+  const app = createApp(App).use(router).mount("#app");
+
+  app.use(store)

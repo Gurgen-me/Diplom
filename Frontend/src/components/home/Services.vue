@@ -1,30 +1,41 @@
 <template>
   <v-container class="bg-surface-variant">
-    <v-col v-for="n in 9" :key="n" cols="" sm="4">
+    <v-col v-for="(service, index) in allServices" :key="index" cols="" sm="4">
       <v-sheet class="ma-2 pa-2">
         <MDBCard style="width: 18rem">
-          <MDBCardImg top src="https://mdbootstrap.com/img/new/standard/city/062.webp" alt="..." />
+          <MDBCardImg top :src="service.photo" alt="..."/>
           <MDBCardBody>
-            <MDBCardTitle>Card title</MDBCardTitle>
+            <MDBCardTitle>{{service.title}}</MDBCardTitle>
             <MDBCardText>
-              Some quick example text to build on the card title and make up the bulk of the
-              card's content.
+              {{service.details}}
             </MDBCardText>
           </MDBCardBody>
-          <hr />
-          <p class="pu">254545 </p>
+          <hr/>
+          <p class="pu">{{service.price}}</p>
         </MDBCard>
       </v-sheet>
     </v-col>
   </v-container>
 </template>
 
-<script setup lang="ts">
-import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg, mdbRipple } from "mdb-vue-ui-kit";
+<script lang="ts">
+import {MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg, mdbRipple} from "mdb-vue-ui-kit";
+import {defineComponent} from "vue";
 
-const vMdbRipple = mdbRipple
-
-console.log("Services component loaded");
+export default defineComponent({
+  name: "Services",
+  components: {
+    MDBCard, MDBCardBody, MDBCardTitle, MDBCardText,
+  },
+  async mounted() {
+    await this.$store.dispatch("getServices");
+  },
+  computed: {
+    allServices(): any {
+      return this.$store.state.ServicesState.services
+    }
+  }
+})
 </script>
 
 <style scoped>
