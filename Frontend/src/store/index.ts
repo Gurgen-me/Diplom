@@ -1,17 +1,14 @@
 import { createStore } from 'vuex'
-import api from './api'
+import ServicesState from './ServicesState'
 
 export default createStore({
-    state() {
-        return {}
+    state: {
     },
     mutations: {
-        
     },
-    actions: {
-        
+    actions: {        
     },
     modules: {
-        
+        ServicesState: ServicesState
     }
 })

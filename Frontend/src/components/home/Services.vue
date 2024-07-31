@@ -21,17 +21,24 @@
 <script lang="ts">
 import {MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg, mdbRipple} from "mdb-vue-ui-kit";
 import {defineComponent} from "vue";
+// import {SERVISES_INTARFACE} from "@/store/interfaces/SERVISES_INTARFACE";
+
 
 export default defineComponent({
   name: "Services",
+  props: {
+    allServices: Array
+  },
   components: {
     MDBCard, MDBCardBody, MDBCardTitle, MDBCardText,
   },
   async mounted() {
-    await this.$store.dispatch("getServices");
+    await this.$store.dispatch("fetchAllServices");
+    console.log(this.$store.state.ServicesState.services);
+    
   },
   computed: {
-    allServices(): any {
+    allServices(): any[] {
       return this.$store.state.ServicesState.services
     }
   }

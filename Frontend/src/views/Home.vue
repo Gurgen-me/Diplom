@@ -6,11 +6,18 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script lang="ts">
 
 import Slide from '../components/home/Slide.vue'
 import Services from '../components/home/Services.vue'
+import { defineComponent } from 'vue';
 
+export default  defineComponent({
+  name: "Home",
+  components: {
+    Slide, Services
+  },
+});
 </script>
 
 <style scoped>
