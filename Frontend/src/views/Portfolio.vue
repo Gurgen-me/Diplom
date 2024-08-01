@@ -16,7 +16,7 @@
         <MDBModalHeader>
             <MDBModalTitle id="exampleModalLabel"> rrsgyhrdfhdr </MDBModalTitle>
         </MDBModalHeader>
-        <MDBModalBody><img src="https://mdbootstrap.com/img/new/standard/city/041.webp" @click="exampleModal = true" class="img-thumbnail" alt="..." /></MDBModalBody>
+        <MDBModalBody>...</MDBModalBody>
         <MDBModalFooter>
             <MDBBtn color="secondary" @click="exampleModal = false">Close</MDBBtn>
             <MDBBtn color="primary">Save changes</MDBBtn>

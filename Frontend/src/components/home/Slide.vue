@@ -1,5 +1,5 @@
 <template>
-  <div class="p-5 text-center bg-image" style="
+  <div class="p-5 text-center bg-image" id="slide" style="
       background-image: url('../../public/Image.jpg');
       height: 500px;
     ">
@@ -27,6 +27,10 @@ console.log("Slide component loaded");
 </script>
 
 <style scoped>
+#slide {
+  max-width: 1600px;
+  margin: 0 auto;
+}
 .bg-image {
   background-size: cover;
   background-position: center;

@@ -2,7 +2,9 @@
   <Slide />
   <h1 class="text-center">Наши услуги</h1>
   <div class="price">
-    <Services />
+    <template v-for="(service, index) in allServices" :key="index">
+      <Services :service="service" />
+    </template>
   </div>
 </template>
 
@@ -17,6 +19,16 @@ export default  defineComponent({
   components: {
     Slide, Services
   },
+  async mounted() {
+    await this.$store.dispatch("fetchAllServices");
+    console.log(this.$store.state.ServicesState.services);
+    
+  },
+  computed: {
+    allServices(): any[] {
+      return this.$store.state.ServicesState.services;
+    }
+  }
 });
 </script>
 
@@ -24,5 +36,12 @@ export default  defineComponent({
 .bg-image {
   background-size: cover;
   background-position: center;
+}
+.price {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
 }
 </style>

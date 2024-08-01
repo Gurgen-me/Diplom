@@ -1,5 +1,5 @@
 <template>
-<router-link to="https://n1185091.yclients.com">dhrrfdgder</router-link>
+<Before-after />
 </template>
     
 <script setup lang="ts">

@@ -1,9 +1,8 @@
 <template>
   <v-container class="bg-surface-variant">
-    <v-col v-for="(service, index) in allServices" :key="index" cols="" sm="4">
-      <v-sheet class="ma-2 pa-2">
-        <MDBCard style="width: 18rem">
-          <MDBCardImg top :src="service.photo" alt="..."/>
+      <v-sheet class="ma-2 pa-2" id="card">
+        <MDBCard>
+          <img class="services_img" src="../../../public/assets`${service.photo}`" alt="Фотография услуги">
           <MDBCardBody>
             <MDBCardTitle>{{service.title}}</MDBCardTitle>
             <MDBCardText>
@@ -14,40 +13,35 @@
           <p class="pu">{{service.price}}</p>
         </MDBCard>
       </v-sheet>
-    </v-col>
   </v-container>
 </template>
 
 <script lang="ts">
 import {MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg, mdbRipple} from "mdb-vue-ui-kit";
 import {defineComponent} from "vue";
-// import {SERVISES_INTARFACE} from "@/store/interfaces/SERVISES_INTARFACE";
-
+import {SERVISES_INTARFACE} from "../../store/interfaces/SERVISES_INTARFACE";
 
 export default defineComponent({
   name: "Services",
+  data: () => ({
+      show: false,
+    }),
   props: {
-    allServices: Array
+    service: {
+      required: true,
+      type: Object
+    }
   },
   components: {
-    MDBCard, MDBCardBody, MDBCardTitle, MDBCardText,
+
   },
-  async mounted() {
-    await this.$store.dispatch("fetchAllServices");
-    console.log(this.$store.state.ServicesState.services);
-    
-  },
-  computed: {
-    allServices(): any[] {
-      return this.$store.state.ServicesState.services
-    }
-  }
+  
 })
 </script>
 
 <style scoped>
 .services_img {
-  width: 240px;
+  width: 250px;
   height: 300px;
 }
 
@@ -70,5 +64,11 @@ export default defineComponent({
   justify-content: center;
   grid-template-columns: repeat(3, 0.01fr);
   grid-gap: 20px;
+}
+#card {
+  color: white;
+  background-color: rgb(73, 73, 73);
+  width: 18rem;
+  height: 18rem;
 }
 </style>

@@ -1,24 +1,20 @@
 <template>
-  <MDBNavbar expand="lg" light bg="black" container>
-    <router-link to="/" class="nav-link">GM</router-link>
-    <MDBNavbarToggler
-      target="#navbarExample02"
-      @click="collapse2 = !collapse2"
-    ></MDBNavbarToggler>
-    <MDBCollapse id="navbarExample02" v-model="collapse2">
-      <MDBNavbarNav  right class="mb-2 mb-lg-0">
-        <MDBNavbarItem>
-          <router-link to="/" class="nav-link">Главная</router-link>
-        </MDBNavbarItem>
-        <MDBNavbarItem>
-          <router-link to="/portfolio" class="nav-link">Портфолио</router-link>
-        </MDBNavbarItem>
-        <MDBNavbarItem>
-          <router-link to="/about" class="nav-link">О нас</router-link>
-        </MDBNavbarItem>
-      </MDBNavbarNav>
-    </MDBCollapse>
-  </MDBNavbar>
+  <header>
+    <MDBNavbar expand="lg" light bg="black" container>
+      <router-link to="/" class="ashki">GM</router-link>
+      <MDBNavbarToggler target="#navbarExample02" @click="collapse2 = !collapse2"></MDBNavbarToggler>
+      <MDBCollapse id="navbarExample02" v-model="collapse2">
+        <MDBNavbarNav right class="mb-2 mb-lg-0">
+          <div class="all_ashki">
+            <router-link to="/" class="ashki">Главная</router-link>
+            <router-link to="/portfolio" class="ashki">Портфолио</router-link>
+            <router-link to="/about" class="ashki">О нас</router-link>
+            <router-link to="/faq" class="ashki">FAQ</router-link>
+          </div>
+        </MDBNavbarNav>
+      </MDBCollapse>
+    </MDBNavbar>
+  </header>
 </template>
 
 <script setup lang="ts">
@@ -35,13 +31,33 @@ const collapse2 = ref(false);
 </script>
 
 <style>
-.nav-link {
-  color: white;
+header {
+  max-width: 1600px;
 }
-.nav-link:hover {
+.all_ashki {
+  display: flex;
+  justify-content: space-between;
+}
+.ashki {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ashki:hover {
+  display: flex;
+  justify-content: space-between;
   color: rgb(121, 121, 121);
 }
+
+.ashki:active {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(121, 121, 121);
+}
+
 .navbar-toggler {
-  background-color: #ffffff;
+  background-color: #1a1a1a;
+  color: #ffffff;
 }
 </style>
