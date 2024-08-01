@@ -1,10 +1,13 @@
 <template>
-
-  <Navbar />
-
-  <router-view />
-
-  <Footer />
+  <header>
+    <Navbar />
+  </header>
+  <main>
+    <router-view />
+  </main>
+  <footer>
+    <Footer />
+  </footer>
 
 </template>
 
@@ -20,4 +23,13 @@ export default {
 };
 </script>
 <style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 1600px;
+}
+footer{
+	margin-top: -80px;
+}
 </style>

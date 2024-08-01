@@ -36,6 +36,7 @@ header {
 }
 .all_ashki {
   display: flex;
+  margin: 5px 15px;
   justify-content: space-between;
 }
 .ashki {
