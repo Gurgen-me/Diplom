@@ -29,7 +29,7 @@ export default {
   box-sizing: border-box;
   max-width: 1600px;
 }
-footer{
-	margin-top: -80px;
+main{
+  padding: 1rem;
 }
 </style>

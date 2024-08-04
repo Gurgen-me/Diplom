@@ -1,8 +1,6 @@
 <template>
-  <div class="p-5 text-center bg-image" id="slide" style="
-      background-image: url('../../public/Image.jpg');
-      height: 500px;
-    ">
+  <div class="p-5 text-center bg-image" id="slide">
+    <!-- <img src="../../assets/slide.jpg" alt="" srcset=""> -->
     <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
       <div class="d-flex justify-content-md-start align-items-center h-100">
         <div class="text-white">
@@ -12,7 +10,7 @@
           <h4 class="mb-3">КРАСНОДАР - район Катюши / Ипподрома</h4>
           <h4 class="mb-3">Бронировка авто пленкой/ Ипподрома</h4>
           <MDBBtn class="sign_up" outline="light"  role="button">
-            <a href="https://n1185091.yclients.com">Записаться</a>
+            <router-lint to="https://n1185091.yclients.com">Записаться</router-lint>
           </MDBBtn>
         </div>
       </div>
@@ -28,8 +26,11 @@ console.log("Slide component loaded");
 
 <style scoped>
 #slide {
+  margin: 0;
+  padding: 0;
+  height: 500px;
   max-width: 1600px;
-  margin: 0 auto;
+  background-image: url(../../assets/slide.jpg);
 }
 .bg-image {
   background-size: cover;

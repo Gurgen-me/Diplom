@@ -29,9 +29,4 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach((to: any, from: any, next: any) => {
-  document.title = 'GM';
-  next()
-})
-
 export default router;

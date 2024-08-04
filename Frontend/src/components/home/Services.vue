@@ -2,25 +2,23 @@
   <v-container class="bg-surface-variant">
       <v-sheet class="ma-2 pa-2" id="card">
         <MDBCard>
-          <img class="services_img" src="../../../public/assets`${service.photo}`" alt="Фотография услуги">
+          <img :src="service.photo" class="services_img" alt="Фотография услуги">
           <MDBCardBody>
-            <MDBCardTitle>{{service.title}}</MDBCardTitle>
-            <MDBCardText>
+            <p class="pu">{{service.title}}</p>
+            <p>
               {{service.details}}
-            </MDBCardText>
+            </p>
           </MDBCardBody>
           <hr/>
-          <p class="pu">{{service.price}}</p>
+          <p class="pu">{{service.price}} ₽ </p>
         </MDBCard>
       </v-sheet>
   </v-container>
 </template>
 
 <script lang="ts">
-import {MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBCardImg, mdbRipple} from "mdb-vue-ui-kit";
+import {MDBCard, MDBCardBody} from "mdb-vue-ui-kit";
 import {defineComponent} from "vue";
-import {SERVISES_INTARFACE} from "../../store/interfaces/SERVISES_INTARFACE";
-
 export default defineComponent({
   name: "Services",
   data: () => ({
@@ -35,23 +33,15 @@ export default defineComponent({
   components: {
 
   },
-  
 })
 </script>
 
 <style scoped>
 .services_img {
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: 200px;
 }
 
-.MDBCard {
-  padding: 5px;
-  margin: 15px;
-  width: 250px;
-  height: 350px;
-  background-color: aqua;
-}
 
 .pu {
   display: flex;
@@ -60,15 +50,16 @@ export default defineComponent({
 }
 
 .bg-surface-variant {
-  display: grid;
+  display: flex;
   justify-content: center;
-  grid-template-columns: repeat(3, 0.01fr);
-  grid-gap: 20px;
+  flex-direction: column;
+  padding: 15px;
+
 }
 #card {
   color: white;
   background-color: rgb(73, 73, 73);
-  width: 18rem;
-  height: 18rem;
+  width: 300px;
+  height: 500px;
 }
 </style>
