@@ -4,17 +4,6 @@
         <div class="work">
             <img src="../assets/premium.png" class="work_img" alt="">
         </div>
-        <div class="work">
-            <img src="../assets/premium.png" class="work_img" alt="">
-        </div>
-        <div class="work">
-            <img src="../assets/premium.png" class="work_img" alt="">
-        </div>
-
-        <div class="work">
-            <img src="../assets/premium.png" class="work_img" alt="">
-        </div>
-
     </div>
 </template>
 
