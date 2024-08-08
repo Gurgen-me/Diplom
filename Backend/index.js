@@ -24,6 +24,7 @@ app.post('/create', async (req, res) => {
     }
 }) 
 
+
 app.get('/services', async (req, res) => {
     try {
         const response = await Service.find();

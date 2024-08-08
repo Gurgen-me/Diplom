@@ -1,6 +1,6 @@
 <template>
   <!-- Footer -->
-  <MDBFooter :text="['center', 'lg-start', 'muted']">
+  <MDBFooter  bg="#303336" :text="['center', 'lg-start', 'muted']">
     <!-- Section: Social media -->
     <section class="
         d-flex
@@ -78,14 +78,20 @@
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
             <p>
-              <i class="fas fa-home me-3"></i>ул. Ковтюха, 98, Краснодар, Краснодарский край, 350001
+             <a href="https://yandex.ru/maps/-/CDc8iZIM">
+               <i class="fas fa-home me-3"></i>ул. Ковтюха, 98, Краснодар, Краснодарский край, 350001
+             </a>
             </p>
             <p>
+              <a href="mailto:dlyakino.7@gmail.com">
               <i class="fas fa-envelope"></i>
-              &nbsp;&nbsp;&nbsp;gmdetailing@gmail.com
+              &nbsp;&nbsp;&nbsp;dlyakino.7@gmail.com
+              </a>
             </p>
             <p>
+              <a href="tel:+7 989 827 02 07">
               <MDBIcon icon="phone" class="me-3" />+7 989 827 02 07
+              </a>
             </p>
           </MDBCol>
           <!-- Grid column -->
@@ -111,7 +117,7 @@ import {
   MDBContainer,
   MDBRow,
   MDBCol,
-  MDBIcon
+  MDBIcon, MDBNavbar
 } from 'mdb-vue-ui-kit';
 </script>
 

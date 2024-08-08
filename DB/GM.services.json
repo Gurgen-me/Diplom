@@ -12,7 +12,7 @@
   "_id": {
     "$oid": "66a2618559923f35b4adfb8c"
   },
-  "photo": "2.jpg",
+  "photo": "../../../src/assets/trifaz.png",
   "title": "Трёхфазная мойка",
   "details": "Haha",
   "price": 800,
@@ -22,7 +22,7 @@
   "_id": {
     "$oid": "66a261b759923f35b4adfb8d"
   },
-  "photo": "3.jpg",
+  "photo": "../../../src/assets/salon.png",
   "title": "Деликатная мойка салона",
   "details": "Haha",
   "price": 800,

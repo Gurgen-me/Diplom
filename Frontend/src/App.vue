@@ -24,12 +24,13 @@ export default {
 </script>
 <style>
 *{
-  margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 1600px;
 }
-main{
-  padding: 1rem;
+#app {
+  margin: 0 auto;
+  max-width: 1600px;
+  background-color: #1d1f23;
+  color: white;
 }
 </style>
