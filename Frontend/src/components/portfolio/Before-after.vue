@@ -1,48 +1,19 @@
 <template>
   <!-- Button trigger modal -->
   <div class="all_work">
-    <div class="work" @click="staticBackdrop = true" >
+    <div class="work">
       <img src="../../assets/premium.png" class="work_img" alt="">
     </div>
-    <div class="work" @click="staticBackdrop = true" >
+    <div class="work" >
       <img src="../../assets/premium.png" class="work_img" alt="">
     </div>
   </div>
-  <!-- Modal -->
-  <MDBModal
-      id="staticBackdrop"
-      tabindex="-1"
-      labelledby="staticBackdropLabel"
-      v-model="staticBackdrop"
-      staticBackdrop
-  >
-    <MDBModalHeader>
-      <MDBModalTitle id="staticBackdropLabel">  sgregerg  </MDBModalTitle>
-    </MDBModalHeader>
-    <MDBModalBody>
-<BASlider />
-    </MDBModalBody>
-    <MDBModalFooter>
 
-      <MDBBtn color="secondary"> 10000 ₽ </MDBBtn>
-    </MDBModalFooter>
-  </MDBModal>
-</template>
+ </template>
 
 <script setup lang="ts">
-import {
-  MDBModal,
-  MDBModalHeader,
-  MDBModalTitle,
-  MDBModalBody,
-  MDBModalFooter,
-  MDBBtn,
-} from 'mdb-vue-ui-kit';
-import { ref } from 'vue';
 
-import BASlider from "./BASlider.vue";
 
-const staticBackdrop = ref(false);
 
 </script>
 

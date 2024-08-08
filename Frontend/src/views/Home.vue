@@ -3,9 +3,13 @@
   <h1 class="text-center">Наши услуги</h1>
   <div class="price">
     <template v-for="(service, index) in allServices" :key="index">
-      <Services :service="service" />
+      <Services :service="service" @click="service.isOpen = true"/>
+      <Modal :isOpen="service.isOpen" v-if=" service.isOpen ">
+        {{ index }}
+      </Modal>
     </template>
   </div>
+
 </template>
 
 <script lang="ts">
@@ -13,11 +17,12 @@
 import Slide from '../components/home/Slide.vue'
 import Services from '../components/home/Services.vue'
 import { defineComponent } from 'vue';
+import Modal from "../components/modal/Modal.vue";
 
 export default  defineComponent({
   name: "Home",
   components: {
-    Slide, Services
+    Slide, Services, Modal
   },
   async mounted() {
     await this.$store.dispatch("fetchAllServices");
@@ -28,7 +33,11 @@ export default  defineComponent({
     allServices(): any[] {
       return this.$store.state.ServicesState.services;
     }
+  },
+  methods: {
+
   }
+
 });
 </script>
 

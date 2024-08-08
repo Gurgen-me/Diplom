@@ -28,11 +28,7 @@ const router = createRouter({
       name: "ba",
       component: () => import("../components/portfolio/Before-after.vue"),
     },
-    {
-      path: "/modal",
-      name: "modal",
-      component: () => import("../components/modal.vue"),
-    },
+
   ],
 })
 

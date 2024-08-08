@@ -3,4 +3,5 @@ export interface SERVISES_INTARFACE {
     title: string;
     details: string;
     price: number;
+    isOpen: false;
 }

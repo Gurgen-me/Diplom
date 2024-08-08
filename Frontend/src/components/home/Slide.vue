@@ -10,7 +10,7 @@
           <h4 class="mb-3">КРАСНОДАР - район Катюши / Ипподрома</h4>
           <h4 class="mb-3">Бронировка авто пленкой/ Ипподрома</h4>
           <MDBBtn class="sign_up" outline="light"  role="button">
-            <router-lint to="https://n1185091.yclients.com">Записаться</router-lint>
+            <a href="https://w1197953.yclients.com">Записаться</a>
           </MDBBtn>
         </div>
       </div>
