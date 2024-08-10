@@ -3,9 +3,16 @@
   <h1 class="text-center">Наши услуги</h1>
   <div class="price">
     <template v-for="(service, index) in allServices" :key="index">
-      <Services :service="service" @click="service.isOpen = true"/>
-      <Modal :isOpen="service.isOpen" v-if=" service.isOpen ">
-        {{ index }}
+      <Services :service="service" @click="service.isOpen = true" />
+      <Modal :isOpen="service.isOpen" v-if=" service.isOpen" @click="service.isOpen = false">
+        <MDBCard>
+          <img :src="service.photo" class="services_img" alt="Фотография услуги">
+          <MDBCardBody>
+            <p class="pu">{{service.title}}</p>
+            <p class="pu">{{service.details}}</p>
+          </MDBCardBody>
+          <p class="pu">{{service.price}} ₽ </p>
+        </MDBCard>
       </Modal>
     </template>
   </div>
@@ -18,6 +25,7 @@ import Slide from '../components/home/Slide.vue'
 import Services from '../components/home/Services.vue'
 import { defineComponent } from 'vue';
 import Modal from "../components/modal/Modal.vue";
+import {MDBCard, MDBCardBody} from "mdb-vue-ui-kit";
 
 export default  defineComponent({
   name: "Home",
@@ -52,5 +60,9 @@ flex-direction: row;
 flex-wrap: wrap;
 justify-content: center;
 align-items: center;
+}
+.services_img {
+  width: 800px;
+  height: 400px;
 }
 </style>

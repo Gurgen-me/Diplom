@@ -46,50 +46,47 @@
           <MDBCol md="3" lg="4" xl="3" class="mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>Company name
+              <i class="fas fa-gem me-3"></i>GM
             </h6>
             <p>
-              Here you can use rows and columns to organize your footer
-              content. Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit.
+              Для тех, кто ценит свой автомобиль!
+              КРАСНОДАР - район Катюши / Ипподрома
+              Бронировка авто пленкой/ Ипподрома
             </p>
           </MDBCol>
           <!-- Grid column -->
           <!-- Grid column -->
           <MDBCol md="3" lg="2" xl="2" class="mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+            <h6 class="text-uppercase fw-bold mb-4">Страницы</h6>
             <p>
-              <router-link to="" class="text-reset">Pricing</router-link>
+              <router-link to="/" class="text-reset">Главная</router-link>
             </p>
             <p>
-              <router-link to="" class="text-reset">Settings</router-link>
+              <router-link to="/about" class="text-reset">О нас</router-link>
             </p>
             <p>
-              <router-link to="" class="text-reset">Orders</router-link>
-            </p>
-            <p>
-              <router-link to="" class="text-reset">Help</router-link>
+              <router-link to="/portfolio" class="text-reset">Портфолио</router-link>
             </p>
           </MDBCol>
           <!-- Grid column -->
           <!-- Grid column -->
           <MDBCol md="4" lg="3" xl="3" class="mx-auto mb-md-0 mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <h6 class="text-uppercase fw-bold mb-4">КОНТАКТЫ</h6>
             <p>
-             <a href="https://yandex.ru/maps/-/CDc8iZIM">
+             <a href="https://yandex.ru/maps/-/CDc8iZIM" class="text-reset">
                <i class="fas fa-home me-3"></i>ул. Ковтюха, 98, Краснодар, Краснодарский край, 350001
              </a>
             </p>
             <p>
-              <a href="mailto:dlyakino.7@gmail.com">
+              <a href="mailto:dlyakino.7@gmail.com" class="text-reset">
               <i class="fas fa-envelope"></i>
               &nbsp;&nbsp;&nbsp;dlyakino.7@gmail.com
               </a>
             </p>
             <p>
-              <a href="tel:+7 989 827 02 07">
+              <a href="tel:+7 989 827 02 07" class="text-reset">
               <MDBIcon icon="phone" class="me-3" />+7 989 827 02 07
               </a>
             </p>

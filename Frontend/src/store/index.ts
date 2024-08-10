@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import ServicesState from './ServicesState'
+import PortfoliosState from "./PorpfoliosState.ts";
 
 export default createStore({
     state: {
@@ -9,6 +10,7 @@ export default createStore({
     actions: {        
     },
     modules: {
-        ServicesState: ServicesState
+        ServicesState: ServicesState,
+        PortfoliosState: PortfoliosState
     }
 })

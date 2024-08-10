@@ -4,6 +4,7 @@ const http = require('http');
 const cors = require('cors');
 
 const Service = require('./models/Services');
+const Portfolio = require('./models/Portfolio');
 
 const PORT = 3000;
 
@@ -13,21 +14,21 @@ const server = http.createServer(app);
 app.use(express.json());
 app.use(cors());
 
-app.post('/create', async (req, res) => {
-    try {
-        const { photo,title, details, price } = req.body;
-        const response = await Service.create({ photo, title, details, price });
-        console.log(response);
-        return res.json(response);
-    } catch (error) {
-        console.log(error);
-    }
-}) 
 
 
 app.get('/services', async (req, res) => {
     try {
         const response = await Service.find();
+        console.log(response);
+        return res.json(response);
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+app.get('/portfolios', async (req, res) => {
+    try {
+        const response = await Portfolio.find();
         console.log(response);
         return res.json(response);
     } catch (error) {
