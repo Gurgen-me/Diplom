@@ -49,7 +49,8 @@ export default defineComponent({
 }
 
 .modal_open {
-  background-color: #ffffff;
+  background-color: #535353;
+  border-radius: 25px;
   width: 800px;
   height: 600px;
   color: #1d1f23;

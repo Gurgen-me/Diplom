@@ -2,7 +2,7 @@
   <v-container class="bg-surface-variant">
     <v-sheet class="ma-2 pa-2" id="card">
       <div class="img_about">
-        <img :src="portfolio.after" alt="Наши работы" />
+        <img :src="portfolio.after" class="services_img" alt="Наши работы" />
       </div>
     </v-sheet>
   </v-container>
@@ -10,7 +10,6 @@
 
 
 <script lang="ts">
-import {MDBCard, MDBCardBody} from "mdb-vue-ui-kit";
 import {defineComponent} from "vue";
 export default defineComponent({
   name: "Services",

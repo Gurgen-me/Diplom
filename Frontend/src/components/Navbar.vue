@@ -1,7 +1,7 @@
 <template>
     <MDBNavbar expand="lg" dark bg="#1d1f23" container>
       <MDBNavbarBrand>
-        <router-link to="/"><h3> GM </h3> </router-link>
+        <router-link to="/"><h3 class="logo"> SARERA </h3> </router-link>
       </MDBNavbarBrand>
       <MDBNavbarToggler
         target="#navbarExample01"
@@ -31,5 +31,7 @@
 </script>
 
 <style>
-
+.logo{
+  color: rgba(255, 255, 255, 0.65);
+}
 </style>

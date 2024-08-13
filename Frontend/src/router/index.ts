@@ -18,7 +18,6 @@ const router = createRouter({
       name: "portfolio",
       component: () => import("../views/Portfolio.vue"),
     },
-
   ],
 })
 

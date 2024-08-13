@@ -33,7 +33,9 @@ export default {
   background-color: #1d1f23;
   color: white;
 }
-
+body{
+  background-color: #1d1f23;
+}
 ::-webkit-scrollbar {
   width: 8px;
   background-color: #000000;

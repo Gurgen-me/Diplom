@@ -7,36 +7,7 @@
         justify-content-center justify-content-lg-between
         p-4
         border-bottom
-      ">
-      <!-- Left -->
-      <div class="me-5 d-none d-lg-block">
-        <span>Get connected with us on social networks:</span>
-      </div>
-      <!-- Left -->
-      <!-- Right -->
-      <div>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="facebook-f"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="twitter"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="google"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="instagram"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="linkedin"></MDBIcon>
-        </a>
-        <a href="" class="me-4 text-reset">
-          <MDBIcon iconStyle="fab" icon="github"></MDBIcon>
-        </a>
-      </div>
-      <!-- Right -->
-    </section>
-    <!-- Section: Social media -->
+      "></section>
     <!-- Section: Links  -->
     <section class="">
       <MDBContainer class="text-center text-md-start mt-5">
@@ -46,7 +17,7 @@
           <MDBCol md="3" lg="4" xl="3" class="mx-auto mb-4">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>GM
+              SARERA
             </h6>
             <p>
               Для тех, кто ценит свой автомобиль!
@@ -55,6 +26,21 @@
             </p>
           </MDBCol>
           <!-- Grid column -->
+          <MDBCol md="3" lg="2" xl="2" class="mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Наши соц сети</h6>
+            <p>
+              <a href="https://www.youtube.com/channel/UCqAo7O9R4b97CxujqSKPHdg" class="text-reset">Youtube</a>
+            </p>
+            <p>
+              <a href="tel:+7 989 827 02 07" class="text-reset">
+                WhatsApp
+              </a>
+            </p>
+            <p>
+              <router-link to="/portfolio" class="text-reset">Портфолио</router-link>
+            </p>
+          </MDBCol>
           <!-- Grid column -->
           <MDBCol md="3" lg="2" xl="2" class="mx-auto mb-4">
             <!-- Links -->
@@ -76,18 +62,17 @@
             <h6 class="text-uppercase fw-bold mb-4">КОНТАКТЫ</h6>
             <p>
              <a href="https://yandex.ru/maps/-/CDc8iZIM" class="text-reset">
-               <i class="fas fa-home me-3"></i>ул. Ковтюха, 98, Краснодар, Краснодарский край, 350001
+               <b>Адрес:</b> ул. Ковтюха, 98, Краснодар, Краснодарский край, 350001
              </a>
             </p>
             <p>
               <a href="mailto:dlyakino.7@gmail.com" class="text-reset">
-              <i class="fas fa-envelope"></i>
-              &nbsp;&nbsp;&nbsp;dlyakino.7@gmail.com
+                <b>Почта:</b> dlyakino.7@gmail.com
               </a>
             </p>
             <p>
               <a href="tel:+7 989 827 02 07" class="text-reset">
-              <MDBIcon icon="phone" class="me-3" />+7 989 827 02 07
+                <b>Телефон:</b> +7 989 827 02 07
               </a>
             </p>
           </MDBCol>
@@ -100,7 +85,7 @@
     <!-- Copyright -->
     <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05)">
       © 2024 Copyright:
-      <a class="text-reset fw-bold" href="https://mdbootstrap.com/">GM</a>
+      <a class="text-reset fw-bold" href="https://yandex.ru/legal/siteconstruct_termsofuse/">SARERA</a>
     </div>
     <!-- Copyright -->
   </MDBFooter>
@@ -113,15 +98,11 @@ import {
   MDBFooter,
   MDBContainer,
   MDBRow,
-  MDBCol,
-  MDBIcon, MDBNavbar
+  MDBCol
 } from 'mdb-vue-ui-kit';
 </script>
 
 <style scoped>
 
-.bg-light {
-    --mdb-bg-opacity: 1;
 
-}
 </style>

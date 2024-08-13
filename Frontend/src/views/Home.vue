@@ -8,10 +8,12 @@
         <MDBCard>
           <img :src="service.photo" class="services_img" alt="Фотография услуги">
           <MDBCardBody>
-            <p class="pu">{{service.title}}</p>
-            <p class="pu">{{service.details}}</p>
+            <p>{{service.title}}</p>
+            <p> <h5>Описание:</h5>
+              {{service.details}}
+            </p>
           </MDBCardBody>
-          <p class="pu">{{service.price}} ₽ </p>
+          <p class="pri">{{service.price}} ₽ </p>
         </MDBCard>
       </Modal>
     </template>
@@ -64,5 +66,11 @@ align-items: center;
 .services_img {
   width: 800px;
   height: 400px;
+  border-radius: 25px;
+}
+.pri{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 </style>
