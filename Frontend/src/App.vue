@@ -25,6 +25,11 @@ export default {
 * {
   padding: 0;
   box-sizing: border-box;
+  color: white;
+}
+
+a {
+  text-decoration: none;
 }
 
 #app {
@@ -36,6 +41,9 @@ export default {
 body{
   background-color: #1d1f23;
 }
+
+
+
 ::-webkit-scrollbar {
   width: 8px;
   background-color: #000000;

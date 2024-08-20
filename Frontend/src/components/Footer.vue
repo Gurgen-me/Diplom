@@ -42,19 +42,6 @@
             </p>
           </MDBCol>
           <!-- Grid column -->
-          <MDBCol md="3" lg="2" xl="2" class="mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">Страницы</h6>
-            <p>
-              <router-link to="/" class="text-reset">Главная</router-link>
-            </p>
-            <p>
-              <router-link to="/about" class="text-reset">О нас</router-link>
-            </p>
-            <p>
-              <router-link to="/portfolio" class="text-reset">Портфолио</router-link>
-            </p>
-          </MDBCol>
           <!-- Grid column -->
           <!-- Grid column -->
           <MDBCol md="4" lg="3" xl="3" class="mx-auto mb-md-0 mb-4">

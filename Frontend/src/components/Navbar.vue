@@ -1,37 +1,48 @@
 <template>
-    <MDBNavbar expand="lg" dark bg="#1d1f23" container>
-      <MDBNavbarBrand>
-        <router-link to="/"><h3 class="logo"> SARERA </h3> </router-link>
-      </MDBNavbarBrand>
-      <MDBNavbarToggler
-        target="#navbarExample01"
-        @click="collapse1 = !collapse1"
-      ></MDBNavbarToggler>
-      <MDBCollapse id="#navbarExample01" v-model="collapse1">
-        <MDBNavbarNav right>
-          <MDBNavbarItem to="/"> Home </MDBNavbarItem>
-          <MDBNavbarItem to="/about"> About </MDBNavbarItem>
-          <MDBNavbarItem to="/portfolio"> Portfolio </MDBNavbarItem>
-        </MDBNavbarNav>
-      </MDBCollapse>
-    </MDBNavbar>
+  <nav class="navbar navbar-expand-lg  bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <router-link to="/" class="navbar-brand">Sarera</router-link>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse " id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <router-link to="/" class="nav-link active" aria-current="page">Главная</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/portfolio" class="nav-link">Портфолио</router-link>
+          </li>
+          <li class="nav-item">
+            <router-link to="/about" class="nav-link">О нас</router-link>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 </template>
 
-<script setup lang="ts">
-  import {
-    MDBNavbar,
-    MDBNavbarToggler,
-    MDBNavbarNav,
-    MDBNavbarItem,
-    MDBCollapse,
-    MDBNavbarBrand
-  } from 'mdb-vue-ui-kit';
-  import { ref } from 'vue';
-  const collapse1 = ref(false);
+<script>
+
+export default {
+  name: 'Navbar',
+  data() {
+    return {
+
+    };
+  },
+  methods: {
+
+  }
+};
 </script>
 
-<style>
-.logo{
-  color: rgba(255, 255, 255, 0.65);
+<style scoped>
+#navbarNavDropdown{
+  display: flex;
+  justify-content: end;
+}
+.container-fluid{
+  max-width: 1600px;
 }
 </style>

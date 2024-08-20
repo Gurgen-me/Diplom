@@ -49,7 +49,6 @@ export default defineComponent({
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 15px;
 
 }
 #card {
@@ -58,7 +57,7 @@ export default defineComponent({
   margin-top: 5px;
   border-radius: 15px;
 }
-.info {
+.pu {
   margin-left: 10px;
 }
 

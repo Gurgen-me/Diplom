@@ -8,8 +8,8 @@
         <MDBCard>
           <img :src="service.photo" class="services_img" alt="Фотография услуги">
           <MDBCardBody>
-            <p>{{service.title}}</p>
-            <p> <h5>Описание:</h5>
+            <p class="pu">{{service.title}}</p>
+            <p class="pu"> <h5>Описание:</h5>
               {{service.details}}
             </p>
           </MDBCardBody>
@@ -37,16 +37,12 @@ export default  defineComponent({
   async mounted() {
     await this.$store.dispatch("fetchAllServices");
     console.log(this.$store.state.ServicesState.services);
-    
   },
   computed: {
     allServices(): any[] {
       return this.$store.state.ServicesState.services;
     }
   },
-  methods: {
-
-  }
 
 });
 </script>
@@ -57,11 +53,12 @@ export default  defineComponent({
   background-position: center;
 }
 .price {
-display: flex;
-flex-direction: row;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 15px;
 }
 .services_img {
   width: 800px;
@@ -72,5 +69,43 @@ align-items: center;
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  margin-right: 10px;
+}
+.pu {
+  margin-left: 10px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .services_img {
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+  }
+
+}
+
+
+@media (max-width: 767px) {
+  .services_img {
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .services_img {
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+  }
+}
+@media (max-width: 344px) {
+  .services_img {
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+  }
 }
 </style>

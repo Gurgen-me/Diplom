@@ -43,8 +43,6 @@ export default defineComponent({
 .bg-surface-variant {
   display: flex;
   justify-content: center;
-  flex-direction: column;
-  padding: 15px;
 
 }
 #card {
@@ -53,8 +51,6 @@ export default defineComponent({
   margin-top: 5px;
   border-radius: 15px;
 }
-.info {
-  margin-left: 10px;
-}
+
 
 </style>

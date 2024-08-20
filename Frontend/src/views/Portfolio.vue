@@ -1,21 +1,23 @@
 <template>
   <Slideportfolio/>
-  <template v-for="(portfolio, index) in allPortfolios" :key="index">
-    <Portfolios :portfolio="portfolio" @click="portfolio.isOpen = true" />
+  <div class="cards">
+    <template v-for="(portfolio, index) in allPortfolios" :key="index">
+      <Portfolios :portfolio="portfolio" @click="portfolio.isOpen = true"/>
       <Modal :isOpen="portfolio.isOpen" v-if=" portfolio.isOpen" @click="portfolio.isOpen = false">
         <MDBCard>
           <swiper :navigation="true" :modules="modules" class="mySwiper">
-            <swiper-slide>до<img :src="portfolio.before" class="services_img" alt="Фотография услуги"></swiper-slide>
-            <swiper-slide>после<img :src="portfolio.after" class="services_img" alt="Фотография услуги"></swiper-slide>
+            <swiper-slide><img :src="portfolio.before" class="services_img" alt="Фотография услуги"></swiper-slide>
+            <swiper-slide><img :src="portfolio.after" class="services_img" alt="Фотография услуги"></swiper-slide>
           </swiper>
           <MDBCardBody>
-            <p>{{portfolio.title}}</p>
-            <p>{{portfolio.details}}</p>
+            <p class="pu">{{ portfolio.title }}</p>
+            <p class="pu">{{ portfolio.details }}</p>
           </MDBCardBody>
-          <p class="pri">{{portfolio.price}} ₽ </p>
+          <p class="pri">{{ portfolio.price }} ₽ </p>
         </MDBCard>
       </Modal>
-  </template>
+    </template>
+  </div>
 </template>
 
 <script lang="ts">
@@ -23,7 +25,7 @@ import {defineComponent} from "vue";
 import Slideportfolio from "../components/portfolio/Slideportfolio.vue";
 import Modal from "../components/modal/Modal.vue";
 import Portfolios from "../components/portfolio/Portfolios.vue";
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import {Swiper, SwiperSlide} from 'swiper/vue';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -31,7 +33,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // import required modules
-import { Navigation } from 'swiper/modules';
+import {Navigation} from 'swiper/modules';
 
 export default defineComponent({
   name: "Portfolio",
@@ -84,9 +86,82 @@ export default defineComponent({
   border-radius: 25px;
   object-fit: cover;
 }
-.pri{
+.pu{
+  margin-left: 10px;
+}
+.pri {
   display: flex;
   align-items: center;
   justify-content: end;
+  margin-right: 10px;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 15px;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .swiper {
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .swiper {
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 600px;
+    height: 200px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .swiper {
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 344px) {
+  .swiper {
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+    object-fit: cover;
+  }
 }
 </style>
