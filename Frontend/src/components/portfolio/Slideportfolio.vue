@@ -3,16 +3,19 @@
       <div class="mask" style="background-color: rgba(0, 0, 0, 0.6)">
         <div class="d-flex justify-content-md-center align-items-center h-100">
           <div class="text-white">
-            <h1>Наши работы</h1>
+            <h2>Наши работы</h2>
           </div>
         </div>
       </div>
     </div>
   </template>
   
-  <script setup lang="ts">
+  <script lang="ts">
   
   console.log("Slide component big img loaded");
+  export default {
+    name: "Slideportfolio"
+  }
   </script>
   
   <style scoped>

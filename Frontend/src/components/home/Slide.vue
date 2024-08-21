@@ -5,7 +5,7 @@
       <div class="d-flex justify-content-md-start align-items-center h-100">
         <div class="text-white">
           <h1 class="mb-3">Детейлинг центр</h1>
-          <h1 class="mb-3">в Краснодаре SARERA</h1>
+          <h2 class="mb-3">в Краснодаре SARERA</h2>
           <h4 class="mb-3">Для тех, кто ценит свой автомобиль!</h4>
           <h4 class="mb-3">КРАСНОДАР - район Катюши / Ипподрома</h4>
           <h4 class="mb-3">Бронировка авто пленкой/ Ипподрома</h4>

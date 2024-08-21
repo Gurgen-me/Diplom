@@ -4,7 +4,7 @@
         <div class="d-flex justify-content-md-center align-items-center h-100">
           <div class="text-white">
             <h1 class="mb-3">Лучший детейлинг</h1>
-            <h1 class="mb-3">в Краснодаре GM</h1>
+            <h2 class="mb-3">в Краснодаре Sarera</h2>
           </div>
         </div>
       </div>

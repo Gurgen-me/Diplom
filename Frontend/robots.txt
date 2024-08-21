@@ -1,0 +1,6 @@
+User-agent: yandex
+Sitemap: https:site.com/sitemap.xml
+
+User-agent: google
+Sitemap: https:site.com/sitemap.xml
+

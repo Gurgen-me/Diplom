@@ -1,6 +1,6 @@
 <template>
   <Slide />
-  <h1 class="text-center">Наши услуги</h1>
+  <h2 class="text-center">Наши услуги</h2>
   <div class="price">
     <template v-for="(service, index) in allServices" :key="index">
       <Services :service="service" @click="service.isOpen = true" />

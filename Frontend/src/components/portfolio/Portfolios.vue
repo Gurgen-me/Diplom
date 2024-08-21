@@ -46,9 +46,10 @@ export default defineComponent({
 
 }
 #card {
+  display: flex;
   width: 300px;
   height: 300px;
-  margin-top: 5px;
+  padding: 15px;
   border-radius: 15px;
 }
 
