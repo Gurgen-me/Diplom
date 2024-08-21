@@ -38,7 +38,7 @@
               </a>
             </p>
             <p>
-              <router-link to="/portfolio" class="text-reset">Портфолио</router-link>
+              <a href="https://t.me/GM_0702" class="text-reset">Telegram</a>
             </p>
           </MDBCol>
           <!-- Grid column -->
